@@ -10,6 +10,7 @@ public class CannonBall : MonoBehaviour
     private bool IsShooting = false;
     private float CurrentDuration;
 
+    //Awake
     private void Awake()
     {
         Rigidbody = GetComponent<Rigidbody>();
