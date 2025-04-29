@@ -18,6 +18,7 @@ public class CannonBall : MonoBehaviour
 
     public void Shoot(Vector3 force, Action<CannonBall> callback)
     {
+        Rigidbody.linearVelocity = Vector2.zero;
         gameObject.SetActive(true);
         Callback = callback;
         Rigidbody.AddForce(force, ForceMode.Impulse);
