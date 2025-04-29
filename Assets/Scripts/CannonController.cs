@@ -3,7 +3,7 @@ using UnityEngine;
 public class CannonController : MonoBehaviour
 {
     [SerializeField] private Transform Pivot;
-    [SerializeField] private Transform ShotOrigin;
+    [SerializeField] private Transform ShootOrigin;
     [SerializeField] private float RotationSpeed;
     [SerializeField] private float ShootForce;
 
@@ -33,8 +33,8 @@ public class CannonController : MonoBehaviour
     private void OnShoot()
     {
         CannonBall cannonBall = Pool.Rent();
-        cannonBall.transform.SetPositionAndRotation(ShotOrigin.position, Quaternion.identity);
-        cannonBall.Shoot(ShootForce * ShotOrigin.forward, CannonBallCallback);
+        cannonBall.transform.SetPositionAndRotation(ShootOrigin.position, Quaternion.identity);
+        cannonBall.Shoot(ShootForce * ShootOrigin.forward, CannonBallCallback);
     }
 
     private void CannonBallCallback(CannonBall cannonBall)

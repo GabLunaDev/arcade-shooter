@@ -424,8 +424,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pivot: {fileID: 723401932}
-  ShotOrigin: {fileID: 2102690529}
+  ShootOrigin: {fileID: 2102690529}
   RotationSpeed: 10
+  ShootForce: 10
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
